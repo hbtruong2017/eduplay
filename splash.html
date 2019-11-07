@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Eduplay</title>
+    
+<!-- Favicon (TO ADD) -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
+<!-- Styles -->
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+<!-- Bootstrap libraries-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-md">
+        <div class="navbar-nav mr-auto ">
+            <a href="http://google.com" class="logo">EDUPLAY</a><!-- TO ADD -->
+        </div>
+        <div class="navbar-nav ml-auto ">
+            <a href="http://google.com" class="nav-item nav-link active">Learn more</a>
+            <a href="http://google.com" class="nav-item nav-link">About</a>
+            <a href="http://google.com" class="nav-item nav-link">Contact</a>
+            <a href="http://google.com" class="nav-item nav-link">Blog</a>
+        </div>
+    </nav>
+    
+     <!-- Main Content-->
+    <div class="container">
+        <div class="row_splash">
+            <p class="headline">Revolutionising the way students learn</p>
+            <p class="subheadline"><b>Low content creation friction</b>, <b>personalised</b> Learning Management System that incorporates <b>gamified</b> quiz elements with <b>similarity</b> and  <b>frequency</b> learning.</p>
+            <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#login">Try it out</button>
+        </div>
+    </div>
+    
+    <!-- Login Pop-up (Normal) -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="modal-title w-100 text-center" id="loginTitle">FIll in the details</h3>
+                        <form>
+                            <div class="row justify-content-center">
+                                <div class="form-group">
+                                    <label for="username">Email</label>
+                                    <input type="text" class="form-control" id="username" aria-describedby="Email">
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                    <div class="form-group">
+                                        <label for="quizname">Quiz Name</label>
+                                        <input type="text" class="form-control" id="username" aria-describedby="Quiz Name">
+                                    </div>
+                                </div>
+                            </div><br/>
+                            <div class="row justify-content-center">
+                                    <h6 class="question">Desired number of questions for your quiz</h6>  &nbsp; &nbsp;
+                                <div class="otp" id="otp">
+                                  <input type="phone" class="otp-input" maxlength="1" id="otp1">
+                                  <input type="phone" class="otp-input" maxlength="1">
+                                </div>
+                          </div><br/>
+                            <div class="col text-center">
+                                <label type="file" class="btn btn-primary file">Upload questions <input type="file" hidden></label>
+                                <!-- <label><h6>or</h6></label>
+                                <label type="file" class="btn btn-primary file">Create your quiz</label> -->
+                            </div>
+                            <br>
+                            <div class="col text-center">
+                                    <label type="file" class="btn btn-primary file" data-toggle="modal" data-target="#login"  onclick="myFunction()">Generate quiz</label>
+                            </div>
+                        </form><br/><br/>
+                        <!-- <p class="cta text-center">Don't have a tBank account? <a href="" target="_blank">Sign up</a>.</p><br/> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="generated" tabindex="-1" role="dialog" aria-labelledby="loginTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom-0">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h3 class="modal-title w-100 text-center" id="loginTitle">FIll in the details</h3>
+                                <form>
+                                    <div class="row justify-content-center">
+                                        <div class="form-group">
+                                            <label for="username">Email</label>
+                                            <input type="text" class="form-control" id="username" aria-describedby="Email">
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                            <div class="form-group">
+                                                <label for="quizname">Quiz Name</label>
+                                                <input type="text" class="form-control" id="username" aria-describedby="Quiz Name">
+                                            </div>
+                                        </div>
+                                    </div><br/>
+                                    <div class="row justify-content-center">
+                                            <h6 class="question">Desired number of questions for your quiz</h6>  &nbsp; &nbsp;
+                                        <div class="otp" id="otp">
+                                          <input type="phone" class="otp-input" maxlength="1" id="otp1">
+                                          <input type="phone" class="otp-input" maxlength="1">
+                                        </div>
+                                  </div><br/>
+                                    <div class="col text-center">
+                                        <label type="file" class="btn btn-primary file">Upload questions <input type="file" hidden></label>
+                                        <!-- <label><h6>or</h6></label>
+                                        <label type="file" class="btn btn-primary file">Create your quiz</label> -->
+                                    </div>
+                                    <br>
+                                    <div class="col text-center">
+                                            <label type="file" class="btn btn-primary file" data-toggle="modal" data-target="#login"  onclick="myFunction()">Generate quiz</label>
+                                    </div>
+                                </form><br/><br/>
+                                <!-- <p class="cta text-center">Don't have a tBank account? <a href="" target="_blank">Sign up</a>.</p><br/> -->
+                        </div>
+                    </div>
+                </div>
+    </div>
+</body>
+
+<!-- Bootstrap JS libraries-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Log in form-->
+<script>
+$( () => {
+
+  $('.form-group').each((i,e) => {
+    $('.form-control', e)
+      .focus( function () {
+        e.classList.add('not-empty');
+      })
+      .blur( function () {
+        this.value === '' ? e.classList.remove('not-empty') : null;
+      })
+    ;
+  });
+  
+});     
+
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
+var otp = (function(){
+  //cache dom
+  var $inputs = $("#otp").find("input");
+
+  //bind events
+  $inputs.on('keyup', processInput);
+  
+  //define methods
+  function processInput(e) {
+    var x = e.charCode || e.keyCode;
+    if( (x == 8 || x == 46) && this.value.length == 0) {
+      var indexNum = $inputs.index(this);
+      if(indexNum != 0) {
+        $inputs.eq($inputs.index(this) - 1).focus();
+      }
+    }
+    
+    if( ignoreChar(e) ) 
+      return false;
+    else if (this.value.length == this.maxLength) {
+      $(this).next('input').focus();
+    }
+  }
+  function ignoreChar(e) {
+    var x = e.charCode || e.keyCode;
+    if (x == 37 || x == 38 || x == 39 || x == 40 )
+      return true;
+    else 
+      return false
+  }
+  
+})();  
+</script>
+</html>
